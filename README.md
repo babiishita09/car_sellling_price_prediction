@@ -7,5 +7,6 @@ https://carselling-prices.herokuapp.com/
 # Data Source:
 https://github.com/babiishita09/car_sellling_price_prediction/blob/main/car_data.csv
 
-#Demo of My App:
+# Demo of My App:
+![alt-text](https://github.com/babiishita09/car_sellling_price_prediction/blob/main/Screenshot%20(17).png)
 
