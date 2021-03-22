@@ -1,7 +1,7 @@
-# car_sellling_price_prediction
+# Car Selling Price Prediction
 This is a machine learning web app for predicting selling price of second hand cars
 
-# Heroku deployment link-
+# Heroku Deployment Link-
 https://carselling-prices.herokuapp.com/
 
 # Data Source:
