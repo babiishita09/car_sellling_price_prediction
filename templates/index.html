@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8" name="viewpoint" content="width=device-width,initial-scale=1.0">
+    <title>Car_Price_prediction</title>
+    <link rel="stylesheet" href="static">
+
+<style>
+ body {
+    background-image:
+    url("static/car5.jpg");
+    background-repeat: no-repeat;
+    background-attachment:
+    fixed;
+    background-position: center;
+    background-size:cover ;
+
+   }
+.main{
+   background-color:rgb(0,0,0,0.6);
+   width:600px;
+   margin:auto;
+   height:700px;
+   }
+
+
+  label{
+  right:auto;
+  position:relative;
+  padding:10px 40px;
+  box-sizing:border-box;
+  display: inline-block;
+  font-size:30px;
+  color:white;
+  }
+  input{
+  left:auto;
+  position:relative;
+  box-sizing:border-box;
+  height:25px;
+  display: inline-block;
+  border-radius:6px;
+  }
+
+  button{
+  background-color:blue;
+  display:block;
+  margin:20px 0px 0px 20px;
+  text-align:center;
+  padding:14px 110px;
+  outline:none;
+  color:white;
+  cursor:pointer;
+  transition:0.25px;
+  border-radius:6px;
+  }
+  .heading{
+  text-align:center;
+  background-color:rgb(0,0,0,0.6);
+  font-size:20px;
+  color: white;
+  font-family:Cursive;
+  }
+  select{
+   padding:10px 40px;
+  box-sizing:border-box;
+  }
+  .result{
+  font-size:80px;
+  text-align:center;
+  font-weight:bold;
+  }
+  .footer{
+     position:auto;
+     left:0;
+     bottom:0;
+     width:100%;
+     font-size:20px;
+     text-align:center;
+     font-family:cursive;
+     }
+</style>
+</head>
+
+<body>
+<div class="heading"><h1>Welcome to Car Price Prediction Web App</h1>
+        <h4>This is a Machine Learning Car Selling Price Prediction web app.You can check selling price of your Car.
+            Fill the below boxes and click the submit button.</h4>
+
+    </div>
+<br>
+
+<center class="main">
+    <div class="form">
+       <form action='/predict' method="POST">
+           <label class="Year"><b>Year</b></label><br>
+           <input id="first" name="Year" type="number" placeholder="Year" required="required"><br>
+           <label class="Price"><b>What is the Showroom Price?(In lakhs)</b></label><br>
+           <input id="second" name="Present_Price" placeholder="Present_Price" required="required"> <br>
+           <label class="Km"><b>How many kilometers drived?</b></label><br>
+           <input id="third" name="Kms_Driven" placeholder="Kms_Driven" required="required"><br>
+           <label class="Owners"><b>How much owners previously had the car?(0 or 1 0r 3)</b></b></label><br>
+           <input id="fourth" name="Owner" placeholder="Owner" required="required"><br>
+           <label class="fuel"><b>What is Fuel type?</b></label><br>
+           <select name="Fuel_Type_Petrol" id="fuel" required="required">
+               <option value="Petrol">Petrol</option>
+               <option value="Diesel">Diesel</option>
+               <option value="Diesel">CNG</option>
+           </select><br>
+           <label class="seller_type"><b>Are you a Dealer or Individul</b></label><br>
+           <select name="Seller_Type_Individual" id="resea" required="required">
+               <option value="Dealer">Dealer</option>
+               <option value="Individual">Individual</option>
+           </select><br>
+           <label class="transmission"><b>Transmission Type</b></label><br>
+           <select name="Transmission_Mannual" id="research" required="required">
+               <option value="Mannual">Mannual Car</option>
+               <option value="Actumatic">Automatic Car</option>
+           </select><br> <br>
+            <button type="submit" class="submit"><b>Submit</b></button>
+       </form>
+        <br>
+        <div class="result">
+        <p style='color:yellow'>{{ prediction_text }}</p>
+        </div>
+    </div>
+    <br>
+     <div class="footer">
+        <footer style='color:yellow'>
+            <p><b>Made by ISHITA MAITY</b></p>
+        </footer>
+    </div>
+</center>
+</body>
+</html>
+
